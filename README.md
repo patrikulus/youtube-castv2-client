@@ -1,7 +1,7 @@
 ## youtube-castv2-client
 
-youtube-castv2-client youtube sender.
-This has been updated to work with the new protocol. The original project appears to be abandoned.
+youtube-castv2-client youtube sender. This is based on castv2-youtube, which appears to be abandoned.
+This has been updated to work with the new protocol.
 
 ### Sample
 
