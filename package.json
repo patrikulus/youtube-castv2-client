@@ -11,13 +11,17 @@
     "chromecast",
     "castv2"
   ],
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "git@github.com:xat/castv2-youtube.git"
   },
   "author": "Simon Kusterer",
   "license": "MIT",
   "dependencies": {
-    "castv2-client": "0.0.6"
+    "Q": "0.0.1",
+    "castv2-client": "0.0.6",
+    "lodash": "^4.17.4",
+    "needle": "^1.4.5",
+    "tunnel": "0.0.4"
   }
 }
