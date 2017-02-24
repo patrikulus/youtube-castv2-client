@@ -64,7 +64,6 @@ module.exports.setPlayListParams = function (loungeIdToken, videoIdParam) {
     return getParamString(obj);
 };
 module.exports.terminateSessionParams = function (loungeIdToken, videoIdParam, gSessionId, sId) {
-
     var obj =  {
         device: 'REMOTE_CONTROL',
         id: RANDOM_ID,

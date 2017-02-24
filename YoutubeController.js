@@ -39,12 +39,17 @@ YoutubeController.prototype._inSession = function () {
 
 
 YoutubeController.prototype.load = function (videoId, callback) {
-    if (!this._inSession()) {
-        // TODO use current session's playlist
-        this.terminateSession();
 
+    var that = this;
+    if (this._inSession()) {
+        // TODO use current session's playlist
+        return this.terminateSession()
+            .then(function () {
+                console.log('Previous session terminated...');
+                that.loadWithNewSession(videoId, callback);
+            })
     }
-    this.loadWithNewSession(videoId, callback);
+    return this.loadWithNewSession(videoId, callback);
 };
 
 YoutubeController.prototype.terminateSession = function () {
@@ -64,8 +69,8 @@ YoutubeController.prototype.loadWithNewSession = function (videoId, callback) {
 
     var controlRequestQ = Q.nbind(this.controlRequest, this);
 
+    this.prevVideo = videoId;
 
-    var sId, gSessionId, playlistId, nowPlayingId, firstVideo;
     // 1. Fetch screen ID
     controlRequestQ(
         {
@@ -79,6 +84,7 @@ YoutubeController.prototype.loadWithNewSession = function (videoId, callback) {
         })
         .then(function () {
             // 2. Fetch page to extract XSRF token
+            console.log('Sending request for video Id: ' + videoId);
             var youtubeUrl = utils.getYouTubeUrl(videoId);
             return needleGetQ(youtubeUrl);
         })
