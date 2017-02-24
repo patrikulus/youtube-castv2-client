@@ -63,3 +63,26 @@ module.exports.setPlayListParams = function (loungeIdToken, videoIdParam) {
 
     return getParamString(obj);
 };
+module.exports.terminateSessionParams = function (loungeIdToken, videoIdParam, gSessionId, sId) {
+
+    var obj =  {
+        device: 'REMOTE_CONTROL',
+        id: RANDOM_ID,
+        name: 'Desktop&app=youtube-desktop',
+        'mdx-version': 3,
+        loungeIdToken: loungeIdToken,
+        VER: 8,
+        v: 2,
+        t: 1,
+        ui: 1,
+        RID: 75956,
+        CVER: 1,
+        method: 'setPlaylist',
+        params: getVideoIdParam(videoIdParam),
+        gessionid: gSessionId,
+        SID: sId,
+        TYPE: 'terminate'
+    };
+
+    return getParamString(obj);
+};
