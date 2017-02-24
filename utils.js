@@ -1,20 +1,8 @@
 var YOUTUBE_BASE = 'https://www.youtube.com/';
 var RANDOM_ID = '12345678-9ABC-4DEF-0123-0123456789AB';
 
-module.exports.YOUTUBE_BASE = YOUTUBE_BASE;
-
-
-module.exports.getYouTubeUrl = function (videoId) {
-    return YOUTUBE_BASE + 'watch?v=' + videoId;
-};
-
-
 module.exports.YOUTUBE_LOUNGE_REQUEST = YOUTUBE_BASE + 'api/lounge/pairing/get_lounge_token_batch';
 module.exports.YOUTUBE_PLAYIST_REQUEST = YOUTUBE_BASE + 'api/lounge/bc/bind?';
-
-module.exports.getYouTubeLoungeTokenRequest = function (screenId, xsrfToken) {
-    return 'screen_ids=' + screenId + '&session_token=' + xsrfToken;
-};
 
 module.exports.XsrfTokenRegex = /'XSRF_TOKEN'.*"(\w+)="/g;
 // from current status
@@ -23,6 +11,15 @@ module.exports.playListIdRegex = /listId":"(.*?)"/g;
 module.exports.gSessionIdRegex = /"S","(.*?)"]/g;
 module.exports.nowPlayVideoRegex = /videoId":"(.*?)"/g;
 module.exports.firstVideoRegex = /firstVideoId":"(.*?)"/g;
+
+
+module.exports.getYouTubeUrl = function (videoId) {
+    return YOUTUBE_BASE + 'watch?v=' + videoId;
+};
+
+module.exports.getYouTubeLoungeTokenRequest = function (screenId, xsrfToken) {
+    return 'screen_ids=' + screenId + '&session_token=' + xsrfToken;
+};
 
 function getVideoIdParam(videoIdParam) {
     return '%7B%22videoId%22%3A%22' + videoIdParam + '%22%2C%22currentTime%22%3A5%2C%22currentIndex%22%3A0%7D';

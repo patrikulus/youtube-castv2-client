@@ -1,7 +1,7 @@
 {
-  "name": "castv2-youtube-nextgen",
+  "name": "youtube-castv2-client",
   "version": "0.0.1",
-  "description": "castv2-client youtube sender supporting new protocol",
+  "description": "youtube-castv2-client youtube sender supporting new protocol",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:irfanhabib/castv2-youtube.git"
+    "url": "git@github.com:irfanhabib/youtube-castv2-client.git"
   },
   "author": "Irfan Habib",
   "license": "MIT",

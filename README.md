@@ -1,12 +1,13 @@
-## castv2-youtube
+## youtube-castv2-client
 
-castv2-client youtube sender. This has been updated to work with the new protocol
+youtube-castv2-client youtube sender.
+This has been updated to work with the new protocol. The original project appears to be abandoned.
 
 ### Sample
 
 ```javascript
 var Client                = require('castv2-client').Client;
-var Youtube               = require('castv2-youtube').Youtube;
+var Youtube               = require('youtube-castv2-client').Youtube;
 var mdns                  = require('mdns');
 
 var browser = mdns.createBrowser(mdns.tcp('googlecast'));
