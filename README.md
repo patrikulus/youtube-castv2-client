@@ -1,6 +1,6 @@
 ## castv2-youtube
 
-castv2-client youtube sender.
+castv2-client youtube sender. This has been updated to work with the new protocol
 
 ### Sample
 
