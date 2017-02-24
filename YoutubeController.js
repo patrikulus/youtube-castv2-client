@@ -53,11 +53,10 @@ YoutubeController.prototype.load = function (videoId, callback) {
             // 3. Extract XSRF token
             var body = response[1];
             var match = utils.XsrfTokenRegex.exec(body);
-            if (match.length != 1) {
-                throw 'Failed to extract XSRF token';
-            }
+            // if (match.length >= 1) {
+            //     throw 'Failed to extract XSRF token';
+            // }
             xsrfToken = match[1];
-
         })
         .then(function () {
             // 4. Get Lounge ID
@@ -88,8 +87,6 @@ YoutubeController.prototype.load = function (videoId, callback) {
                     } catch (err) {
                         //noop
                     }
-
-                    console.log('Status response values: ', playlistId, sId, gSessionId, firstVideo, nowPlayingId);
                 });
 
         })
