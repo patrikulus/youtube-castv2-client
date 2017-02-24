@@ -22,6 +22,10 @@ util.inherits(YoutubeController, RequestResponseController);
 
 YoutubeController.prototype.load = function (videoId, callback) {
 
+    if (!_.isFunction(callback)){
+        callback = _.noop;
+    }
+
     var controlRequestQ = Q.nbind(this.controlRequest, this);
     var needleGetQ = Q.denodeify(needle.get);
     var needlePostQ = Q.denodeify(needle.post);
