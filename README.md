@@ -40,7 +40,7 @@ function ondeviceup(host) {
 
 ### Installation
 
-`npm install castv2-youtube`
+`npm install youtube-castv2-client`
 
 ## License
 MIT
