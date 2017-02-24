@@ -4,13 +4,13 @@ var RANDOM_ID = '12345678-9ABC-4DEF-0123-0123456789AB';
 module.exports.YOUTUBE_LOUNGE_REQUEST = YOUTUBE_BASE + 'api/lounge/pairing/get_lounge_token_batch';
 module.exports.YOUTUBE_PLAYIST_REQUEST = YOUTUBE_BASE + 'api/lounge/bc/bind?';
 
-module.exports.XsrfTokenRegex = /'XSRF_TOKEN'.*"(\w+)="/g;
+module.exports.XsrfTokenRegex = /'XSRF_TOKEN'.*"(\w+)="/;
 // from current status
-module.exports.sIdRegex = /"c","(.*?)","/g;
-module.exports.playListIdRegex = /listId":"(.*?)"/g;
-module.exports.gSessionIdRegex = /"S","(.*?)"]/g;
-module.exports.nowPlayVideoRegex = /videoId":"(.*?)"/g;
-module.exports.firstVideoRegex = /firstVideoId":"(.*?)"/g;
+module.exports.sIdRegex = /"c","(.*?)","/;
+module.exports.playListIdRegex = /listId":"(.*?)"/;
+module.exports.gSessionIdRegex = /"S","(.*?)"]/;
+module.exports.nowPlayVideoRegex = /videoId":"(.*?)"/;
+module.exports.firstVideoRegex = /firstVideoId":"(.*?)"/;
 
 
 module.exports.getYouTubeUrl = function (videoId) {
