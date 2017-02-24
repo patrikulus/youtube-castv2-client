@@ -1,7 +1,7 @@
 {
-  "name": "castv2-youtube",
-  "version": "0.0.2",
-  "description": "castv2-client youtube sender",
+  "name": "castv2-youtube-nextgen",
+  "version": "0.0.1",
+  "description": "castv2-client youtube sender supporting new protocol",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,15 +13,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:xat/castv2-youtube.git"
+    "url": "git@github.com:irfanhabib/castv2-youtube.git"
   },
-  "author": "Simon Kusterer",
+  "author": "Irfan Habib",
   "license": "MIT",
   "dependencies": {
     "Q": "0.0.1",
     "castv2-client": "0.0.6",
     "lodash": "^4.17.4",
-    "needle": "^1.4.5",
-    "tunnel": "0.0.4"
+    "needle": "^1.4.5"
   }
 }
